@@ -8,13 +8,44 @@ namespace Vjezba.Model
 {
     public class Fakultet
     {
-        public List<Professor> Professors { get; set; }
-        public List<Student> Students { get; set; }
+        public List<Osoba> listOsoba { get; set; }
 
-        public Fakultet(List<Professor> professors, List<Student> students)
+        public Fakultet()
         {
-            Professors = professors;
-            Students = students;
+            listOsoba = new List<Osoba>();
         }
+
+
+        public int KolikoProfesora()
+        {
+            int brProfesora = 0;
+            foreach (var osoba in listOsoba)
+            {
+                if (osoba is Professor) brProfesora++;
+            }
+            return brProfesora;
+        }
+
+
+        public int KolikoStudenata()
+        {
+            int brStudenata = 0;
+            foreach (var osoba in listOsoba)
+            {
+                if (osoba is Student) brStudenata++;
+            }
+            return brStudenata;
+        }
+
+
+        public Student DohvatiStudenta(string jmbag) 
+        {
+            foreach (var osoba in listOsoba)
+            {
+                if (osoba is Student student) if(student.JMBAG == jmbag) return student;
+            }
+             return null;
+        }
+
     }
 }
