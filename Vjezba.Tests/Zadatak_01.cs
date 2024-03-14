@@ -21,7 +21,6 @@ namespace Vjezba.Test
             Assert.True("01163822039" == o.OIB, "OIB nije dobro spremljen");
             Assert.True("0811990330013" == o.JMBG, "JMBG nije dobro spremljen");
             Assert.True(new DateTime(1990, 11, 8) == o.DatumRodjenja, "Pogrešan datum rođenja iz JMBG-a.");
-            //Commit
         }
 
         [Fact]

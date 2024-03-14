@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Vjezba.Model
 {
@@ -25,7 +21,7 @@ namespace Vjezba.Model
 
         public decimal Prosjek { get; set; }
 
-        public int BrPolozeno {  get; set; }
+        public int BrPolozeno { get; set; }
 
         public int ECTS { get; set; }
 

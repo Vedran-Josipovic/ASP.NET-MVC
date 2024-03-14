@@ -1,17 +1,14 @@
-﻿using System;
-using Vjezba.Model;
-
-
-namespace YourNamespace
+﻿namespace YourNamespace
 {
     class MainClass
     {
         static void Main(string[] args)
         {
+            var a = 10;
 
-            
 
         }
+
 
 
     }

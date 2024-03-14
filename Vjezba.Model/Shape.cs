@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 // Vježba na predavanju
 namespace Vjezba.Model
@@ -16,7 +12,7 @@ namespace Vjezba.Model
         public string Color { get; private set; }
 
         //Konstruktor
-        public Shape(string color) 
+        public Shape(string color)
         {
             Color = color;
         }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Vjezba.Model
 {
@@ -21,7 +17,7 @@ namespace Vjezba.Model
             int brProfesora = 0;
             foreach (var osoba in listOsoba)
             {
-                if (osoba is Professor) brProfesora++;
+                if (osoba is Profesor) brProfesora++;
             }
             return brProfesora;
         }
@@ -38,13 +34,13 @@ namespace Vjezba.Model
         }
 
 
-        public Student DohvatiStudenta(string jmbag) 
+        public Student DohvatiStudenta(string jmbag)
         {
             foreach (var osoba in listOsoba)
             {
-                if (osoba is Student student) if(student.JMBAG == jmbag) return student;
+                if (osoba is Student student) if (student.JMBAG == jmbag) return student;
             }
-             return null;
+            return null;
         }
 
     }

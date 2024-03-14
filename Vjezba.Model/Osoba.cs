@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Vjezba.Model
 {
@@ -31,9 +27,9 @@ namespace Vjezba.Model
             get => _jmbg;
             set
             {
-                if(value.Length != 13) throw new InvalidOperationException("JMBG Treba imati 13 brojki.");
+                if (value.Length != 13) throw new InvalidOperationException("JMBG Treba imati 13 brojki.");
                 bool isNumeric = Regex.IsMatch(value, @"^\d+$");
-                if(!isNumeric ) throw new InvalidOperationException("JMBG treba sadržavati samo brojke.");
+                if (!isNumeric) throw new InvalidOperationException("JMBG treba sadržavati samo brojke.");
                 _jmbg = value;
 
                 DatumRodjenja = IzvuciDatumRodjenja(_jmbg);
