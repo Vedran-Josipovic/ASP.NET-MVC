@@ -81,7 +81,22 @@ namespace Vjezba.Model
         }
 
 
+        public List<Student> DohvatiStudente91List()
+        {
+            return DohvatiStudente91().ToList();
+        }
 
 
-    }
+        public Student NajboljiProsjek(int god)
+        {
+            return listOsoba.OfType<Student>()
+                .Where(s => s.DatumRodjenja.Year == god)
+                .OrderByDescending(s => s.Prosjek) 
+                .FirstOrDefault();
+        }
+
+
+
+
+}
 }
