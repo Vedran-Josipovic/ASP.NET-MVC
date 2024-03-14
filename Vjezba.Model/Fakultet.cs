@@ -95,8 +95,28 @@ namespace Vjezba.Model
                 .FirstOrDefault();
         }
 
+        public IEnumerable<Student> StudentiGodinaOrdered(int god)
+        {
+            return listOsoba
+                .OfType<Student>()
+                .Where(s => s.DatumRodjenja.Year == god)
+                .OrderByDescending(s => s.Prosjek);
+        }
 
 
+        public IEnumerable<Profesor> SviProfesori(bool asc)
+        {
+            if(asc == true) return listOsoba.OfType<Profesor>().OrderBy(s => s.Prezime).ThenBy(s => s.Ime);
+            else return listOsoba.OfType<Profesor>().OrderByDescending(s => s.Prezime).ThenByDescending(s => s.Ime);
+        }
 
-}
+        public int KolikoProfesoraUZvanju(Zvanje zvanje)
+        {
+            return listOsoba
+                .OfType<Profesor>()
+                .Where(p => p.Zvanje == zvanje)
+                .Count();
+        }
+
+    }
 }
