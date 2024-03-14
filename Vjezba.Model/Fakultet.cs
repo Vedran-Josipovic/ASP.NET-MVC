@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Vjezba.Model
 {
@@ -52,6 +53,23 @@ namespace Vjezba.Model
                 if (osoba is Profesor profesor) sortiraniProfesori.Add(profesor);
             }
             return sortiraniProfesori;
+        }
+
+
+
+        public IEnumerable<Student> DohvatiStudente91()
+        {
+             return listOsoba.OfType<Student>().Where(s => s.DatumRodjenja.Year > 1991);
+        }
+
+        public IEnumerable<Student> DohvatiStudente91NoLinq()
+        {
+            List<Student> studenti = new List<Student>();
+            foreach(var o in listOsoba)
+            {
+                if(o is Student s) if(s.DatumRodjenja.Year > 1991) studenti.Add(s);
+            }
+            return studenti;
         }
 
 
