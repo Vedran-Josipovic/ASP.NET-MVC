@@ -41,7 +41,7 @@ namespace Vjezba.Model
 
         private DateTime IzvuciDatumRodjenja(string Jmbg)
         {
-            // dd mm ggg
+            // ggg mm dd  
             string dan = Jmbg.Substring(0, 2);
             string mjesec = Jmbg.Substring(2, 2);
             string godina = Jmbg.Substring(4, 3);

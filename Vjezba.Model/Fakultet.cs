@@ -43,5 +43,17 @@ namespace Vjezba.Model
             return null;
         }
 
+        public IEnumerable<Profesor> DohvatiProfesore()
+        {
+            SortedSet<Profesor> sortiraniProfesori = new SortedSet<Profesor>();
+
+            foreach (var osoba in listOsoba)
+            {
+                if (osoba is Profesor profesor) sortiraniProfesori.Add(profesor);
+            }
+            return sortiraniProfesori;
+        }
+
+
     }
 }
