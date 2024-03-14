@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Reflection.PortableExecutable;
 
 namespace Vjezba.Model
 {
@@ -8,20 +10,12 @@ namespace Vjezba.Model
         public Zvanje Zvanje { get; set; }
         public DateTime DatumIzbora { get; set; }
 
+        public IEnumerable<Predmet> Predmeti {  get; set; }
+
         public Profesor()
         {
+            Predmeti = new List<Predmet>();
         }
-
-        public Profesor(string odjel, Zvanje zvanje, DateTime datumIzbora)
-        {
-            Odjel = odjel;
-            Zvanje = zvanje;
-            DatumIzbora = datumIzbora;
-        }
-
-
-
-
 
         public int KolikoDoReizbora()
         {
