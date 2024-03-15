@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Vjezba.Model
@@ -136,6 +137,13 @@ namespace Vjezba.Model
                 .Where(p => p.Predmeti.Count() > x)
                 .Where(p => p.Predmeti.Any(p => p.ECTS >= minEcts));
         }
+
+
+        public void IzmjeniProfesore(Action<Profesor> action)
+        {
+            ListOsoba.OfType<Profesor>().ToList().ForEach(action);
+        }
+
 
     }
 }
