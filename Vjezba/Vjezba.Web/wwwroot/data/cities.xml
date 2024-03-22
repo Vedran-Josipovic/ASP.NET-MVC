@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<cities>
+	<city>
+		<id>1</id>
+		<name>Adorjan</name>
+	</city>
+	<city>
+		<id>2</id>
+		<name>Belas</name>
+	</city>
+	<city>
+		<id>3</id>
+		<name>Little Current</name>
+	</city>
+	<city>
+		<id>4</id>
+		<name>FigueirÃ³ dos Vinhos</name>
+	</city>
+	<city>
+		<id>5</id>
+		<name>Bofuer</name>
+	</city>
+	<city>
+		<id>6</id>
+		<name>Ustrzyki Dolne</name>
+	</city>
+	<city>
+		<id>7</id>
+		<name>Rudong</name>
+	</city>
+	<city>
+		<id>8</id>
+		<name>Roche Terre</name>
+	</city>
+	<city>
+		<id>9</id>
+		<name>NovoselÃ«</name>
+	</city>
+	<city>
+		<id>10</id>
+		<name>Auas</name>
+	</city>
+	<city>
+		<id>11</id>
+		<name>Mazeikiai</name>
+	</city>
+	<city>
+		<id>12</id>
+		<name>Dengjia</name>
+	</city>
+	<city>
+		<id>13</id>
+		<name>Oklahoma City</name>
+	</city>
+	<city>
+		<id>14</id>
+		<name>Muzi</name>
+	</city>
+	<city>
+		<id>15</id>
+		<name>Ore</name>
+	</city>
+</cities>
